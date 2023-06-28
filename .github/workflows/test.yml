@@ -7,6 +7,4 @@ jobs:
     steps:
       - name: 第一步
         run: echo " 变量：{{ github.event_name }} ${{ github.event_name }} "
-        run: echo " 变量：{{ runner.os }} ${{ runner.os }} "
-        run: echo " 变量：{{ github.repository }} ${{ github.repository }} "
 

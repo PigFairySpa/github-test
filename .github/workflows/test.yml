@@ -13,4 +13,6 @@ jobs:
         run: |
           ls ${{ github.workspace }} #github.workspace 
       - run: echo " 变量： {{job.status}} ${{ job.status }}"
+      - run: echo " 变量： {{secrets.GITHUB_TOKEN}} ${{ secrets.GITHUB_TOKEN }}"
+      - run: echo "${{ secrets.RELEASE_TOKEN }}"
 

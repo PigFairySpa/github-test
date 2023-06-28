@@ -6,13 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 第一步
-      - run: echo " 变量：{{ github.event_name }} ${{ github.event_name }} "
-      - run: echo " 变量：{{ runner.os }} ${{ runner.os }} "
-      - run: echo " 变量：{{ github.ref  }} ${{ github.ref }}  变量： {{github.repository}}  ${{ github.repository }}"
-      - name: Check out repository code
+        run: echo " 变量：{{ github.event_name }} ${{ github.event_name }} "
+        run: echo " 变量：{{ runner.os }} ${{ runner.os }} "
+        run: echo " 变量：{{ github.ref  }} ${{ github.ref }}  变量： {{github.repository}}  ${{ github.repository }}"
+      - name: 第二步 Check out repository code
         uses: actions/checkout@v3
-      - run: echo " 变量：{{ github.repository }} ${{ github.repository }} "
-      - name: List files in the repository
+        run: echo " 变量：{{ github.repository }} ${{ github.repository }} "
+      - name: 第三步 List files in the repository
         run: |
           ls ${{ github.workspace }} #github.workspace 
-      - run: echo " 变量： {{job.status}} ${{ job.status }}"
+        run: echo " 变量： {{job.status}} ${{ job.status }}"

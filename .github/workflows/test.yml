@@ -2,7 +2,7 @@ name: github action 测试
 run-name: 测试名称:github-test
 on: [push]
 jobs:
-   执行的jobs名称:
+  jobs-name:
     runs-on: ubuntu-latest
     steps:
       - name: 第一步

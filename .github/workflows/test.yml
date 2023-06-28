@@ -7,4 +7,10 @@ jobs:
     steps:
       - name: 第一步
         run: echo " 变量：{{ github.event_name }} ${{ github.event_name }} "
+      - name: 第二步 Check out repository code
+        uses: actions/checkout@v3
+      - name: 第三步 List files in the repository
+        run: |
+          ls ${{ github.workspace }} #github.workspace 
+      - run: echo " 变量： {{job.status}} ${{ job.status }}"
 
